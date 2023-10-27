@@ -28,14 +28,12 @@ require(tigerstats)
 require(knitr)
 require(foreign)
 ```
-```{r, eval=TRUE, warning=FALSE}
-#GSS <-read_dta(file="GSS1996.dta")
-GSS <- readstata13::read.dta13(file="GSS1996.dta")
+```{r, eval=FALSE}
+GSS <-read.dta(file="GSSxxxx.dta")
 GSS <- droplevels(GSS)
 mydata <- select(GSS,race,age,eatout)
 mydata <- na.omit(mydata)
 ```
-
 
 
 
